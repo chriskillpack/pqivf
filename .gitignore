@@ -1,0 +1,3 @@
+# Ignore C build artifacts
+internal/cfiles/*.o
+internal/cfiles/test_runner
