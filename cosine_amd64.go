@@ -2,7 +2,14 @@
 
 package pqivf
 
+// #cgo CFLAGS: -I${SRCDIR}/internal/cfiles
+// #cgo CXXFLAGS:-std=c++11 -I${SRCDIR}/internal/cfiles
+// #include "pqivf_avx.h"
+import "C"
+
 import (
+	"unsafe"
+
 	"golang.org/x/sys/cpu"
 )
 
@@ -19,5 +26,8 @@ func manhattanDistanceImpl32(a, b []float32) float32 {
 		return manhattanDistanceGeneric(a, b)
 	}
 
-	return 0.0 // TODO
+	return float32(C.manhattan_distance_f32_avx(
+		(*C.float)(unsafe.Pointer(&a[0])),
+		(*C.float)(unsafe.Pointer(&b[0])),
+		(C.size_t)(len(a))))
 }
