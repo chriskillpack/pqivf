@@ -85,7 +85,7 @@ func BenchmarkCosineSimilarity(b *testing.B) {
 	}
 }
 
-func BenchmarkCosineSimilarityGeneric(b *testing.B) {
+func BenchmarkCosineSimilarityPureGo(b *testing.B) {
 	vecA := make([]float32, benchSize)
 	vecB := make([]float32, benchSize)
 
@@ -158,7 +158,7 @@ func BenchmarkManhattanDistance(b *testing.B) {
 	}
 }
 
-func BenchmarkManhattanDistanceGeneric(b *testing.B) {
+func BenchmarkManhattanDistancePureGo(b *testing.B) {
 	vecA := make([]float32, benchSize)
 	vecB := make([]float32, benchSize)
 

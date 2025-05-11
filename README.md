@@ -8,12 +8,12 @@ $ go test -bench=.
 ...
 cpu: Apple M1
 BenchmarkCosineSimilarity-8               895324              1330 ns/op
-BenchmarkCosineSimilarityGeneric-8        241170              4969 ns/op
+BenchmarkCosineSimilarityPureGo-8         241170              4969 ns/op
 BenchmarkManhattanDistance-8             1223034               980.6 ns/op
-BenchmarkManhattanDistanceGeneric-8       318074              3742 ns/op
+BenchmarkManhattanDistancePureGo-8        318074              3742 ns/op
 ```
 
-`BenchmarkCosineSimilarityGeneric` and `BenchmarkManhattanDistanceGeneric` benchmark the pure Go implementations.
+`BenchmarkCosineSimilarityPureGo` and `BenchmarkManhattanDistancePureGo` benchmark the pure Go fallback implementations.
 
 ## How to use
 
