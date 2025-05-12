@@ -10,6 +10,8 @@ import "C"
 import (
 	"unsafe"
 
+	_ "github.com/chriskillpack/pqivf/internal/cfiles"
+
 	"golang.org/x/sys/cpu"
 )
 
