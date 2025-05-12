@@ -2,8 +2,8 @@
 
 package pqivf
 
-// #cgo CFLAGS: -I${SRCDIR}/internal/cfiles
-// #cgo CXXFLAGS:-std=c++11 -I${SRCDIR}/internal/cfiles
+// #cgo CFLAGS: -I${SRCDIR}/internal/cfiles/amd64
+// #cgo CXXFLAGS:-std=c++11 -I${SRCDIR}/internal/cfiles/amd64
 // #include "pqivf_avx.h"
 import "C"
 

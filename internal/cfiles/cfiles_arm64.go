@@ -4,4 +4,5 @@ package cfiles
 // toolchain compile C files in a subdirectory, we have to create a new Go package in that subdirectory and import it
 // somewhere in our code.
 
+// #include "arm64/pqivf_neon.cc"
 import "C"
